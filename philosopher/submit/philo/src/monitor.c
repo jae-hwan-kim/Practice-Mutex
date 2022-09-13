@@ -34,7 +34,7 @@ void	*action_monitor(void *param)
 				if (check_philos_finish(philo))
 					return ((void *) FAILURE);
 		}
-		usleep(250);
+		usleep(5000);
 	}
 	return ((void *) SUCCESS);
 }

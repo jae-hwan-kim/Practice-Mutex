@@ -16,17 +16,13 @@ int	main(int ac, char **av)
 {
 	t_info	info;
 
-	if (!init_info(ac, av, &info))
-		return (EXIT_FAILURE);
-	if (!init_philo(&info))
-		return (EXIT_FAILURE);
-	if (!init_mutex(&info))
-		return (EXIT_FAILURE);
-	if (!init_thread(&info))
-		return (EXIT_FAILURE);
-	if (!end_thread(&info))
-		return (EXIT_FAILURE);
-	if (!del_and_free_all(&info))
+	if (false
+		|| !init_info(ac, av, &info)
+		|| !init_philo(&info)
+		|| !init_mutex(&info)
+		|| !init_thread(&info)
+		|| !end_thread(&info)
+		|| !del_and_free_all(&info))
 		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }

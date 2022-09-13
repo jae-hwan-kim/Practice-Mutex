@@ -20,6 +20,7 @@ void	*action(void *param)
 	philo = (t_philo *)param;
 	if (philo->id % 2)
 		ft_usleep(philo->info->time_eat);
+	// 생각하는 상태로 시작한다면, 모니터를 ft_usleep전에 하는게 좋을 듯.
 	if (!safe_thread_init(&monitor, philo, MONITOR))
 		return ((void *) FAILURE);
 	pthread_mutex_lock(&philo->info->mutex_time_stamp);
