@@ -1,0 +1,9 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/kimjaehwan/developer_jaekim/42seoul/BornToCode/6_philosopher/ver1.1'
+cc    -c -o src/main.o src/main.c
+cc    -c -o utils/error.o utils/error.c
+cc    -c -o utils/check.o utils/check.c
+cc    -c -o utils/init.o utils/init.c
+cc ./src/main.o ./utils/error.o ./utils/check.o ./utils/init.o -o philo
+make: Leaving directory `/Users/kimjaehwan/developer_jaekim/42seoul/BornToCode/6_philosopher/ver1.1'
+ 
